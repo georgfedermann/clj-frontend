@@ -6,8 +6,7 @@
             [reagent.core :as r]
             ["@smooth-ui/core-sc" :refer [Normalize ThemeProvider]]))
 
-(defn app
-  []
+(defn app []
   [:<>
    [:> Normalize]
    [:> ThemeProvider {:theme cheffy-theme}
