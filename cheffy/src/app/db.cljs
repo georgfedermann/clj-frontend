@@ -1,6 +1,14 @@
 (ns app.db
   (:require [re-frame.core :as re-frame]))
 
+;; normally, the application data would be loaded from some API
+;; in this demo-app, all application data will be mocked in the client db.
+;;
+;; to load the db data into the application, register an event handler with
+;; (re-frame/reg-event-db ... ) as happens below in this file, then trigger load in core.cljs
+;;
+;; to check the state of the db on the client side, list this variable in the JS console in the browser:
+;; re_frame.db.app_db.state
 (def initial-app-db {:auth {:uid nil}
                      :errors {}
                      :inboxes {:inbox-01 {:participants #{"mike@mailinator.com" "jade@mailinator.com"}
