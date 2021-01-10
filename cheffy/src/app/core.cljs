@@ -22,5 +22,3 @@
 (defn ^:export init ;; ^:export makes shadow-cljs not optimize the name of the function 'init' when creating the file /js/main.js that's imported in index.html, or so ...
   []
   (start))
-
-(app)
