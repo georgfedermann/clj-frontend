@@ -1,8 +1,8 @@
 (ns app.nav.views.authenticated
   (:require [app.nav.views.nav-item :refer [nav-item]]
-   ["@smooth-ui/core-sc" :refer [Box]]))
+   ["@smooth-ui/core-sc" :refer [Box]])) ;; Box is basically a div with exposed css properties
 
-(defn authenticated []
+(defn authenticated [] ;; will return a box with a couple of
   (let [nav-items [{:id :saved
                    :name "Saved"
                    :href "#saved"}
