@@ -4,20 +4,21 @@
 
 (defn authenticated [] ;; will return a box with a couple of
   (let [nav-items [{:id :saved
-                   :name "Saved"
-                   :href "#saved"}
-                  {:id :recipes
-                   :name "Recipes"
-                   :href "#recipes"}
-                  {:id :inbox
-                   :name "Inbox"
-                   :href "#inbox"}
-                  {:id :become-a-chef
-                   :name "Chef"
-                   :href "#become-a-chef"}
-                  {:id :profile
-                   :name "Profile"
-                   :href "#profile"}]]
+                    :name "Saved"
+                    :href "#saved"
+                    :dispatch (rf/dispatch [:set-active-nav :saved])}
+                   {:id :recipes
+                    :name "Recipes"
+                    :href "#recipes"}
+                   {:id :inbox
+                    :name "Inbox"
+                    :href "#inbox"}
+                   {:id :become-a-chef
+                    :name "Chef"
+                    :href "#become-a-chef"}
+                   {:id :profile
+                    :name "Profile"
+                    :href "#profile"}]]
   [:> Box {:display "flex"
            :justify-content "flex-end"
            :py 1} ;; padding-y
